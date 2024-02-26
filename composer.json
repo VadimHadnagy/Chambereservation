@@ -1,0 +1,9 @@
+{
+    "name": "vadim/chambereservation",
+    "autoload": {
+        "psr-4": {
+            "Chambereservation\\": "src/"
+        }
+    },
+    "require": {}
+}

@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section_404 {
+    display: flex;
+    justify-content: center;
+    .section_div_404 {
+        text-align: center;
+        h1 {
+            font-size: 100px;
+            color: #000;
+            margin: 0;
+        }
+        p {
+            font-size: 20px;
+            color: #000;
+        }
+    }
+}
