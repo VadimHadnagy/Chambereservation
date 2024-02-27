@@ -43,6 +43,12 @@
             require VIEWS . 'User/UserPanel.php';
         }
 
+        public function showUserBook()
+        {
+            $chambers = $this->userManager->showAllBook();
+            require VIEWS . 'User/UserBook.php';
+        }
+
         // All method for process Authentification, Login
 
 

@@ -44,5 +44,12 @@
             session_destroy();
             header('Location: /');
         }   
+
+        public function showAllBook()
+        {
+            $req = $this->connexion->query('SELECT * FROM chambers');
+            $result = $req->fetchAll();
+            return $result;
+        }
     }
 ?>
