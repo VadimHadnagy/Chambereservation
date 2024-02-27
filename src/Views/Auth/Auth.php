@@ -9,8 +9,10 @@
 </head>
 <?php
     if(isset($_SESSION['user_id'])) {
-        echo "<p class='connected'>Vous êtes déjà connecté</p>";
-        echo "<a href='/user/logout' class='a-login'>Logout Account</a>";
+        echo "<div class='container'>";
+        echo "<p class='connected'>Already connected</p>";
+        echo "<a href='/user/logout' class='a-logout'>Logout Account</a>";
+        echo "</div>";
     } else {
 ?>
 <body>

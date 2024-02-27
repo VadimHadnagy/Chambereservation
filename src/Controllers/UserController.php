@@ -56,6 +56,7 @@
             $user->setUserEmail(htmlspecialchars($_POST['email']));
             $user->setUserPassword(htmlspecialchars($_POST['password']));
             $this->userManager->loginProcess($user);
+            header('Location: /');
         }
 
         public function logout()

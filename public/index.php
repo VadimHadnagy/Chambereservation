@@ -12,10 +12,16 @@ $router = new Chambereservation\Router($_SERVER['REQUEST_URI']);
 $router->get('/', 'UserController@index');
 $router->get('/user/login', 'UserController@showLogin');
 $router->get('/user/create', 'UserController@showCreate');
+$router->get('/user/', 'UserController@showUserPanel');
 
 // Admin routes get
 
 $router->get('/user/admin', 'UserController@showAdminPanel');
+$router->get('/user/admin/create-chamber', 'ChamberController@showAdminCreateChamber');
+
+// Admin routes post 
+
+$router->post('/user/admin/process-create-chamber', 'ChamberController@createChamber');
     
 // user route post
 
