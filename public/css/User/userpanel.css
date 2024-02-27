@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main_section_div_container_user_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    padding: 20px 30px;
+    width: 25rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.main_section_div_container_button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.youreservations {
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #f5a623;
+    width: 40%;
+    text-decoration: none;
+    color: white;
+}
+
+.book {
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    width: 35%;
+    background-color: #22d933;
+    text-decoration: none;
+    color: white;
+}

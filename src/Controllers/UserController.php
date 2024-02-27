@@ -36,6 +36,13 @@
             require VIEWS . 'Admin/AdminPanel.php';
         }
 
+        // All method for show user panel 
+
+        public function showUserPanel()
+        {
+            require VIEWS . 'User/UserPanel.php';
+        }
+
         // All method for process Authentification, Login
 
 
@@ -56,7 +63,7 @@
             $user->setUserEmail(htmlspecialchars($_POST['email']));
             $user->setUserPassword(htmlspecialchars($_POST['password']));
             $this->userManager->loginProcess($user);
-            header('Location: /');
+            header('Location: /user');
         }
 
         public function logout()

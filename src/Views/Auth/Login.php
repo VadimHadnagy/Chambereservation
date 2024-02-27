@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
+    <?php
+    if(isset($_SESSION['user_id'])) {
+        echo "<div class='container'>";
+        echo "<p class='connected'>Already connected</p>";
+        echo "<a href='/user/logout' class='a-logout'>Logout Account</a>";
+        echo "</div>";
+    } else {
+    ?>
     <main>
         <section class="main_section_login">
             <div class="main_section_login_container">
@@ -23,5 +31,6 @@
             </div>
         </section>
     </main>
+    <?php } ?>
 </body>
 </html>
