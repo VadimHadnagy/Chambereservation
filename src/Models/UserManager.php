@@ -51,5 +51,19 @@
             $result = $req->fetchAll();
             return $result;
         }
+
+        public function UserReservationChamber()
+        {
+            $req = $this->connexion->query('SELECT users_reservations.*, chambers.* FROM users_reservations INNER JOIN chambers ON users_reservations.chamber_id = chambers.chamber_id WHERE users_reservations.user_id = ' . $_SESSION['user_id']);
+            $result = $req->fetchAll();
+            return $result;
+        }
+
+        public function UserReservation()
+        {
+            $req = $this->connexion->query('SELECT * FROM users_reservations WHERE user_id = ' . $_SESSION['user_id']);
+            $result = $req->fetchAll();
+            return $result; 
+        }
     }
 ?>

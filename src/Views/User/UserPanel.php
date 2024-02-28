@@ -23,7 +23,15 @@
                 <div class="main_section_div_container_button">
                     <a href="/user/your-reservations" class="youreservations">Your reservations</a>
                     <a href="/user/reservations" class="book">Book</a>
-                </div>
+                    <?php
+                        if(isset($_SESSION["user_role"]) == 1) {
+                    ?>
+                        <a href="/user/admin" class="a-admin">Admin Panel</a>
+                    <?php
+                        }
+                    ?>
+                    <a href="/user/logout" class="a-logout">Logout</a>
+                </div>  
             </div>
         </section>
     </main>

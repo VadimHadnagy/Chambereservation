@@ -6,7 +6,7 @@ main {
 }
 
 .main_section_admin {
-    height: 30vh;
+    height: 25vh;
     padding: 20px 30px;
     width: 25rem;
     border: 2px solid transparent;
@@ -36,6 +36,6 @@ main {
     border-radius: 5px;
     background-color: #22d933;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
 }

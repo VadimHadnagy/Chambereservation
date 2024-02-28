@@ -16,11 +16,12 @@
                 <input type="text" name="namechamber" placeholder="Example : Royal Chamber">
                 <label for="slotschamber">Entrez le nombre de personne maximum pour la chambre</label>
                 <select name="slotschamber" id="slotschamber">
-                    <option value="1">1 personne</option>
-                    <option value="2">2 personnes</option>
-                    <option value="3">3 personnes</option>
-                    <option value="4">4 personnes</option>
-                    <option value="5">5 personnes</option>
+                <?php
+                        for($i = 1; $i <= 25; $i++) 
+                        {
+                            echo "<option value='" . $i . "'>" . $i . " personne(s)</option>";
+                        }
+                ?>
                 </select>
                 <label for="pricepernight">Entrez le prix de la chambre par nuit</label>
                 <input type="number" name="pricepernight" id="pricepernight" placeholder="Tarif en euro">

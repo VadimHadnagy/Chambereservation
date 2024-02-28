@@ -16,11 +16,13 @@ $router->get('/user/', 'UserController@showUserPanel');
 $router->get('/user/your-reservations', 'UserController@showUserReservation');
 $router->get('/user/reservations', 'UserController@showUserBook');
 $router->get('/user/logout', 'UserController@logout');
+$router->get('/user/reservations-confirm', 'UserController@showUserReservationConfirm');
 
 // user route post
 
 $router->post('/user/create-process', 'UserController@createProcess');
 $router->post('/user/login-process', 'UserController@loginProcess');
+$router->post('/user/book-process', 'UserController@bookProcess');
 
 // Admin routes get
 
@@ -30,6 +32,11 @@ $router->get('/user/admin/create-chamber', 'ChamberController@showAdminCreateCha
 // Admin routes post 
 
 $router->post('/user/admin/process-create-chamber', 'ChamberController@createChamber');
+
+// Chamber routes post 
+
+$router->post('/user/remove-book?:id', 'ChamberController@removeChamber');
+$router->post('/user/book-process?:id', 'ChamberController@bookProcess');
     
 
 $router->run();

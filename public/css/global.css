@@ -29,6 +29,15 @@ html {
     color: white;
 }
 
+.a-admin {
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #6e57d2;
+    text-decoration: none;
+    color: white;
+}
+
 .a-login {
     padding: 10px 10px;
     border-radius: 5px;
@@ -38,7 +47,7 @@ html {
     color: white;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"]{
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #d3d3d3;

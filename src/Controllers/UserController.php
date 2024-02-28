@@ -43,6 +43,18 @@
             require VIEWS . 'User/UserPanel.php';
         }
 
+        public function showUserReservationConfirm()
+        {
+            require VIEWS . 'Layout.php';
+        }
+
+        public function showUserReservation()
+        {
+            $reservations = $this->userManager->UserReservation();
+            $chamber = $this->userManager->UserReservationChamber();
+            require VIEWS . 'User/UserReservation.php';
+        }
+
         public function showUserBook()
         {
             $chambers = $this->userManager->showAllBook();

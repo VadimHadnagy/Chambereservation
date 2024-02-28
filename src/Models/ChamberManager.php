@@ -18,6 +18,23 @@
                 'chamber_price' => $chamber->getChamberPrice()
             ));
         }
+
+        public function bookRemove($id)
+        {
+            $req = $this->connexion->prepare("DELETE FROM chambers WHERE chamber_id = :id");
+            $req->execute(array('id' => $id));
+        }
+
+        public function bookChamber(Reservation $reservation)
+        {
+            $req = $this->connexion->prepare("INSERT INTO users_reservations (user_id, chamber_id, reservation_datestart, reservation_dateend) VALUES (:user_id, :chamber_id, :reservation_datestart, :reservation_dateend)");
+            $req->execute(array(
+                'user_id' => $_SESSION["user_id"],
+                'chamber_id' => $reservation->getChamberID(),
+                'reservation_datestart' => $reservation->getReservationStart(),
+                'reservation_dateend' => $reservation->getReservationEnd()
+            ));
+        }
     }
     
 ?>
